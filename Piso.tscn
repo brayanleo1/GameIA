@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://PisoDesativado.png" type="Texture" id=1]
+[ext_resource path="res://PisoAtivado.png" type="Texture" id=2]
+[ext_resource path="res://Area2D.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="VisualScript" id=2]
+data = {
+"base_type": "SpriteFrames",
+"functions": [ {
+"data_connections": [  ],
+"function_id": -1,
+"name": "f_312843592",
+"nodes": [  ],
+"scroll": Vector2( -318.538, -304 ),
+"sequence_connections": [  ]
+} ],
+"is_tool_script": false,
+"signals": [  ],
+"variables": [  ],
+"vs_unify": true
+}
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "An1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "An2",
+"speed": 5.0
+} ]
+script = SubResource( 2 )
+
+[node name="Piso" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 385
+collision_mask = 385
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2( 15, 15 )
+shape = SubResource( 1 )
+
+[node name="PisoSprite" type="AnimatedSprite" parent="Area2D"]
+frames = SubResource( 3 )
+animation = "An1"
