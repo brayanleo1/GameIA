@@ -48,7 +48,20 @@ position = Vector2( 0.8218, -2.6866 )
 shape = SubResource( 2 )
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-margin_left = 34.0
-margin_top = -20.0
-margin_right = 119.0
-margin_bottom = -6.0
+margin_left = 27.4885
+margin_top = -18.3533
+margin_right = 112.488
+margin_bottom = -4.35326
+
+[node name="WinOrLose" type="Label" parent="."]
+visible = false
+margin_left = 20.1551
+margin_top = 2.3134
+margin_right = 106.155
+margin_bottom = 16.3134
+
+[node name="Time" type="Label" parent="."]
+margin_left = 77.4885
+margin_top = 2.98007
+margin_right = 117.488
+margin_bottom = 16.9801

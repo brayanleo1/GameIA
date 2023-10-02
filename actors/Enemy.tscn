@@ -51,11 +51,15 @@ scale = Vector2( 100, 100 )
 shape = SubResource( 2 )
 
 [node name="StunTimer" type="Timer" parent="AI"]
+wait_time = 10.0
 one_shot = true
+
+[node name="FearTimer" type="Timer" parent="AI"]
 
 [node name="Team" parent="." instance=ExtResource( 7 )]
 position = Vector2( 0.666667, -2.66667 )
 team = 1
 
 [connection signal="body_entered" from="AI/DetectionZone" to="AI" method="_on_DetectionZone_body_entered"]
-[connection signal="timeout" from="AI/StunTimer" to="AI" method="_on_StunTimer_timeout"]
+[connection signal="timeout" from="AI/StunTimer" to="." method="_on_StunTimer_timeout"]
+[connection signal="timeout" from="AI/FearTimer" to="." method="_on_FearTimer_timeout"]
