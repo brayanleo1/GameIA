@@ -9,15 +9,26 @@ var isEnemyActive = false
 var isEnemyStunned = false
 var isEnemyAfraid = false
 
+var animatedSprite : AnimatedSprite
+
 export (int) var speed = 100
 
 func _ready():
 	ai.initialize(self, team.team)
+	animatedSprite = $Body
 
 func _process(delta):
 	get_node("AI").active = isEnemyActive
 	get_node("AI").stun = isEnemyStunned
 	get_node("AI").afraid = isEnemyAfraid
+	if not isEnemyActive:
+		animatedSprite.set_animation("Dea")
+	elif isEnemyStunned and isEnemyActive:
+		animatedSprite.set_animation("Stu")
+	elif isEnemyAfraid and isEnemyActive:
+		animatedSprite.set_animation("Afr")
+	else:
+		animatedSprite.set_animation("Act")
 
 func set_enemy_bool(value):
 	isEnemyActive = value
@@ -28,9 +39,6 @@ func set_enemy_stun(value):
 func set_enemy_afraid(value):
 	isEnemyAfraid = value
 
-func rotate_toward(location: Vector2):
-	rotation = lerp(rotation, global_position.direction_to(location).angle(), 0.1)
-	
 func velocity_toward(location: Vector2) -> Vector2:
 	return global_position.direction_to(location) * speed
 

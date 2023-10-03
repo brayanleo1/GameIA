@@ -1,10 +1,36 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://actors/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://actors/Health.tscn" type="PackedScene" id=2]
 [ext_resource path="res://enemy.png" type="Texture" id=3]
+[ext_resource path="res://enemyAfraid.png" type="Texture" id=4]
 [ext_resource path="res://actors/AI.gd" type="Script" id=5]
+[ext_resource path="res://enemyStunned.png" type="Texture" id=6]
 [ext_resource path="res://Team.tscn" type="PackedScene" id=7]
+[ext_resource path="res://enemyDeactive.png" type="Texture" id=8]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Act",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Afr",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "Dea",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "Stu",
+"speed": 5.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.88605, 7.75 )
@@ -18,10 +44,11 @@ collision_layer = 128
 collision_mask = 4992
 script = ExtResource( 1 )
 
-[node name="Body" type="Sprite" parent="."]
+[node name="Body" type="AnimatedSprite" parent="."]
 position = Vector2( 0.503815, -2.75816 )
 rotation = -1.5708
-texture = ExtResource( 3 )
+frames = SubResource( 3 )
+animation = "Act"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.44728, -2.91667 )

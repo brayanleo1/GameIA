@@ -15,6 +15,10 @@ func _ready():
 	time_start = OS.get_unix_time()
 
 func _physics_process(delta):
+	if won:
+			get_node("WinOrLose").text = "You Won"
+			get_node("WinOrLose").visible = true
+	
 	if(alive and not won):
 		var movement_direction := Vector2.ZERO
 		
@@ -32,10 +36,6 @@ func _physics_process(delta):
 		var overlapping_bodies = get_node("Area2D").get_overlapping_bodies()
 		if overlapping_bodies.size() > 0:
 			handle_hit()
-			
-		if won:
-			get_node("WinOrLose").text = "You Won"
-			get_node("WinOrLose").visible = true
 		
 		time_now = OS.get_unix_time()
 		var time_elapsed = time_now - time_start
@@ -45,7 +45,7 @@ func _physics_process(delta):
 		get_node("Time").text = str_elapsed
 		
 		
-		if minutes == 2:
+		if minutes == 1:
 			won = true
 
 func get_team() -> int:
