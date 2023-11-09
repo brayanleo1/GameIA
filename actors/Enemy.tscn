@@ -1,12 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://actors/Enemy.gd" type="Script" id=1]
-[ext_resource path="res://actors/Health.tscn" type="PackedScene" id=2]
 [ext_resource path="res://enemy.png" type="Texture" id=3]
 [ext_resource path="res://enemyAfraid.png" type="Texture" id=4]
 [ext_resource path="res://actors/AI.gd" type="Script" id=5]
 [ext_resource path="res://enemyStunned.png" type="Texture" id=6]
-[ext_resource path="res://Team.tscn" type="PackedScene" id=7]
 [ext_resource path="res://enemyDeactive.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=3]
@@ -33,7 +31,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8.88605, 7.75 )
+extents = Vector2( 7, 7.33333 )
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 72.4431
@@ -51,7 +49,7 @@ frames = SubResource( 3 )
 animation = "Act"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.44728, -2.91667 )
+position = Vector2( 0.333333, -2.66667 )
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -59,10 +57,8 @@ collision_layer = 129
 collision_mask = 257
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 1.66667, -2.83333 )
+position = Vector2( 0.666667, -2.66667 )
 shape = SubResource( 1 )
-
-[node name="Health" parent="." instance=ExtResource( 2 )]
 
 [node name="AI" type="Node2D" parent="."]
 script = ExtResource( 5 )
@@ -76,17 +72,3 @@ collision_mask = 256
 visible = false
 scale = Vector2( 100, 100 )
 shape = SubResource( 2 )
-
-[node name="StunTimer" type="Timer" parent="AI"]
-wait_time = 10.0
-one_shot = true
-
-[node name="FearTimer" type="Timer" parent="AI"]
-
-[node name="Team" parent="." instance=ExtResource( 7 )]
-position = Vector2( 0.666667, -2.66667 )
-team = 1
-
-[connection signal="body_entered" from="AI/DetectionZone" to="AI" method="_on_DetectionZone_body_entered"]
-[connection signal="timeout" from="AI/StunTimer" to="." method="_on_StunTimer_timeout"]
-[connection signal="timeout" from="AI/FearTimer" to="." method="_on_FearTimer_timeout"]

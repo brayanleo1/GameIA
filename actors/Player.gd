@@ -45,7 +45,7 @@ func _physics_process(delta):
 		get_node("Time").text = str_elapsed
 		
 		
-		if minutes == 1:
+		if minutes == 10:
 			won = true
 
 func get_team() -> int:

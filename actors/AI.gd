@@ -1,80 +1,56 @@
 extends Node2D
 
-enum State {
-	DEACTIVE,
-	CHASE,
-	STUNNED,
-	AFRAID
-}
 
-onready var stun_timer = $StunTimer
-onready var fear_timer = $FearTimer
-
-var current_state: int = -1 setget set_state
 var actor: KinematicBody2D = null
-var target: KinematicBody2D = null
-var fear = null
-var team: int = -1
-var active = false
-var stun = false
-var afraid = false
+var target: Area2D = null
+var goal: Area2D = null
+
+var way = []
+
+
 
 var speed = 100
 
 func _ready():
-	set_state(State.DEACTIVE)
+	pass
 
-func _physics_process(delta):
+func _physics_process(delta): #Here i shall have a behavior tree
+	#Selector
+	# isOnGoal
+	# Sequence
+	#  isThereWay
+	#  Selector
+	#   Sequence
+	#    isOnPlace
+	#    getNextTarget
+	#   move
+	# createWay
+	if(target != null || goal != null):
+		target = goal
+		move(speed, delta)
 
-	match current_state:
-		State.DEACTIVE:
-			if active:
-				set_state(State.CHASE)
-		State.CHASE:
-			if not active:
-				set_state(State.DEACTIVE)
-			elif stun:
-				set_state(State.STUNNED)
-				stun_timer.start()
-			elif afraid:
-				set_state(State.AFRAID)
-				fear_timer.start()
-			else:
-				if(target != null):
-					var direction = (target.transform.origin - actor.transform.origin).normalized();
-					var velocity = direction * speed * delta;
-					actor.move_and_collide(velocity);
-		State.STUNNED:
-			if not stun:
-				set_state(State.CHASE)
-		State.AFRAID:
-			if not active:
-				set_state(State.DEACTIVE)
-			elif stun:
-				set_state(State.STUNNED)
-				stun_timer.start()
-			elif not afraid:
-				set_state(State.CHASE)
-			else:
-				var direction = (actor.transform.origin - fear).normalized();
-				var velocity = direction * speed * delta;
-				actor.move_and_collide(velocity);
-		_:
-			print("Error: found enemy state that should not exist")
+func getNextTarget():
+	target = way.pop_front()
+	
+func setGoal(g: Area2D):
+	goal = g
 
-func set_state(new_state: int):
-	if new_state == current_state:
-		return
-		
-	current_state = new_state
+func createWay():
+	#A* using the blocks
+	#Uses the h function to get numbers of "distance"
+	#Needs to receive the freePis array to do the computing
+	#and the place where it is located
+	pass
 
-func set_fear(fearable):
-	fear = fearable.transform.origin
+func h():
+	#Receives the an element of freePis array and puts value
+	#The value is the distance towards the goal
+	pass
 
-func initialize(actor: KinematicBody2D, team: int):
+func move(speed, delta):
+	var direction = (target.get_global_position() - actor.transform.origin).normalized();
+	var velocity = direction * speed * delta * 0.1;
+	actor.move_and_collide(velocity);
+
+func initialize(actor: KinematicBody2D):
 	self.actor = actor
-	self.team = team
-
-func _on_DetectionZone_body_entered(body):
-	if body.has_method("get_team") and body.get_team() != team and body.get_team() != 2:
-		target = body
