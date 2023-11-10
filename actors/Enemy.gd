@@ -13,6 +13,12 @@ func _ready():
 
 func setGoal(area):
 	ai.setGoal(area)
+	
+func setAt(area):
+	ai.getPlace(area)
+
+func setMap(area):
+	ai.getMap(area)
 
 func _process(delta):
 	pass

@@ -10,19 +10,26 @@ var goals = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for x in range(10):
+		var linPis = []
 		for y in range(10):
-			matPis = matPis + [get_node("BlocosL"+str(x+1)+"/Bloco"+str(y+1))]
+			linPis = linPis + [get_node("BlocosL"+str(x+1)+"/Bloco"+str(y+1))]
+		matPis = matPis + [linPis]
 	var i = 0
 	for item in matPis:
-		i = i + 1
-		if i%7==0:
-			i = 0
-			if item.has_method("fullBlock"):
-				item.fullBlock()
-		else:
-			freePis = freePis + [item]
+		for x in range(10):
+			i = i + 1
+			if i%7==0:
+				i = 0
+				if item[x].has_method("fullBlock"):
+					item[x].fullBlock()
+			else:
+				freePis = freePis + [item[x]]
 	
 	createGoals()
+	$Enemy1.setAt(matPis)
+	$Enemy2.setAt(matPis)
+	$Enemy1.setMap(matPis)
+	$Enemy2.setMap(matPis)
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_s"):
@@ -39,7 +46,7 @@ func createGoals():
 			if(freePisT.has_method("goalBlock")):
 				freePisT.goalBlock()
 				goals = goals + [freePisT]
-				get_node("Enemy"+str(x+1)).setGoal(freePisT.getArea())
+				get_node("Enemy"+str(x+1)).setGoal(freePisT)
 
 func retFreePis():
 	return freePis

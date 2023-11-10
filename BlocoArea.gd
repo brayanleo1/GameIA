@@ -10,6 +10,12 @@ onready var areaFy = pos.y + 8.5
 
 var animatedSprite : AnimatedSprite
 
+#Test function:
+func whereAt():
+	print(areaIx)
+	print(areaIy)
+
+
 func _ready():
 	# Access the AnimatedSprite node using get_node
 	animatedSprite = $PisoSprite
