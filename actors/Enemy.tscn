@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://actors/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://actors/DZForRotation.gd" type="Script" id=2]
 [ext_resource path="res://enemy.png" type="Texture" id=3]
 [ext_resource path="res://enemyAfraid.png" type="Texture" id=4]
 [ext_resource path="res://actors/AI.gd" type="Script" id=5]
@@ -31,13 +32,12 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7, 7.33333 )
+extents = Vector2( 5.5, 5.5 )
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 8.33333, 8.66667 )
+[sub_resource type="SegmentShape2D" id=4]
+b = Vector2( 0, 0 )
 
 [node name="Enemy" type="KinematicBody2D" groups=["Enemy"]]
-scale = Vector2( 1.5, 1.5 )
 collision_layer = 128
 collision_mask = 256
 script = ExtResource( 1 )
@@ -57,20 +57,25 @@ collision_layer = 128
 collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0.666667, -2.66667 )
+position = Vector2( 0.5, -2.5 )
 shape = SubResource( 1 )
 
 [node name="AI" type="Node2D" parent="."]
 script = ExtResource( 5 )
 
 [node name="DetectionZone" type="Area2D" parent="AI" groups=["enemy"]]
-position = Vector2( 0.666667, -2.66667 )
+position = Vector2( 0, -2.66667 )
+scale = Vector2( 1, 4 )
 collision_layer = 128
 collision_mask = 256
+monitorable = false
+script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AI/DetectionZone"]
-position = Vector2( -0.333334, 3.57628e-06 )
 shape = SubResource( 4 )
+
+[node name="tillNext" type="Timer" parent="AI"]
 
 [connection signal="body_entered" from="AI/DetectionZone" to="AI" method="_on_DetectionZone_body_entered"]
 [connection signal="body_exited" from="AI/DetectionZone" to="AI" method="_on_DetectionZone_body_exited"]
+[connection signal="timeout" from="AI/tillNext" to="AI" method="_on_tillNext_timeout"]

@@ -12,12 +12,10 @@ script = ExtResource( 1 )
 
 [node name="Enemy1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 112, 71 )
-scale = Vector2( 1, 1 )
 z_index = 1
 
 [node name="Enemy2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 23, 116 )
-scale = Vector2( 1, 1 )
 z_index = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -32,63 +30,33 @@ __meta__ = {
 
 [node name="Bloco1" parent="BlocosL1" instance=ExtResource( 2 )]
 position = Vector2( 8, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco2" parent="BlocosL1" instance=ExtResource( 2 )]
 position = Vector2( 23, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco3" parent="BlocosL1" instance=ExtResource( 2 )]
 position = Vector2( 38, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco4" parent="BlocosL1" instance=ExtResource( 2 )]
 position = Vector2( 53, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco5" parent="BlocosL1" instance=ExtResource( 2 )]
 position = Vector2( 68, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco6" parent="BlocosL1" instance=ExtResource( 2 )]
 position = Vector2( 83, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco7" parent="BlocosL1" instance=ExtResource( 2 )]
 position = Vector2( 98, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco8" parent="BlocosL1" instance=ExtResource( 2 )]
 position = Vector2( 113, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco9" parent="BlocosL1" instance=ExtResource( 2 )]
 position = Vector2( 128, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco10" parent="BlocosL1" instance=ExtResource( 2 )]
 position = Vector2( 143, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="BlocosL2" type="Node2D" parent="."]
 position = Vector2( 0, 15 )
@@ -98,63 +66,33 @@ __meta__ = {
 
 [node name="Bloco1" parent="BlocosL2" instance=ExtResource( 2 )]
 position = Vector2( 8, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco2" parent="BlocosL2" instance=ExtResource( 2 )]
 position = Vector2( 23, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco3" parent="BlocosL2" instance=ExtResource( 2 )]
 position = Vector2( 38, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco4" parent="BlocosL2" instance=ExtResource( 2 )]
 position = Vector2( 53, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco5" parent="BlocosL2" instance=ExtResource( 2 )]
 position = Vector2( 68, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco6" parent="BlocosL2" instance=ExtResource( 2 )]
 position = Vector2( 83, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco7" parent="BlocosL2" instance=ExtResource( 2 )]
 position = Vector2( 98, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco8" parent="BlocosL2" instance=ExtResource( 2 )]
 position = Vector2( 113, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco9" parent="BlocosL2" instance=ExtResource( 2 )]
 position = Vector2( 128, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco10" parent="BlocosL2" instance=ExtResource( 2 )]
 position = Vector2( 143, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="BlocosL3" type="Node2D" parent="."]
 position = Vector2( 0, 30 )
@@ -164,63 +102,33 @@ __meta__ = {
 
 [node name="Bloco1" parent="BlocosL3" instance=ExtResource( 2 )]
 position = Vector2( 8, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco2" parent="BlocosL3" instance=ExtResource( 2 )]
 position = Vector2( 23, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco3" parent="BlocosL3" instance=ExtResource( 2 )]
 position = Vector2( 38, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco4" parent="BlocosL3" instance=ExtResource( 2 )]
 position = Vector2( 53, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco5" parent="BlocosL3" instance=ExtResource( 2 )]
 position = Vector2( 68, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco6" parent="BlocosL3" instance=ExtResource( 2 )]
 position = Vector2( 83, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco7" parent="BlocosL3" instance=ExtResource( 2 )]
 position = Vector2( 98, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco8" parent="BlocosL3" instance=ExtResource( 2 )]
 position = Vector2( 113, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco9" parent="BlocosL3" instance=ExtResource( 2 )]
 position = Vector2( 128, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco10" parent="BlocosL3" instance=ExtResource( 2 )]
 position = Vector2( 143, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="BlocosL4" type="Node2D" parent="."]
 position = Vector2( 0, 45 )
@@ -230,63 +138,33 @@ __meta__ = {
 
 [node name="Bloco1" parent="BlocosL4" instance=ExtResource( 2 )]
 position = Vector2( 8, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco2" parent="BlocosL4" instance=ExtResource( 2 )]
 position = Vector2( 23, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco3" parent="BlocosL4" instance=ExtResource( 2 )]
 position = Vector2( 38, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco4" parent="BlocosL4" instance=ExtResource( 2 )]
 position = Vector2( 53, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco5" parent="BlocosL4" instance=ExtResource( 2 )]
 position = Vector2( 68, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco6" parent="BlocosL4" instance=ExtResource( 2 )]
 position = Vector2( 83, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco7" parent="BlocosL4" instance=ExtResource( 2 )]
 position = Vector2( 98, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco8" parent="BlocosL4" instance=ExtResource( 2 )]
 position = Vector2( 113, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco9" parent="BlocosL4" instance=ExtResource( 2 )]
 position = Vector2( 128, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco10" parent="BlocosL4" instance=ExtResource( 2 )]
 position = Vector2( 143, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="BlocosL5" type="Node2D" parent="."]
 position = Vector2( 0, 60 )
@@ -296,63 +174,33 @@ __meta__ = {
 
 [node name="Bloco1" parent="BlocosL5" instance=ExtResource( 2 )]
 position = Vector2( 8, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco2" parent="BlocosL5" instance=ExtResource( 2 )]
 position = Vector2( 23, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco3" parent="BlocosL5" instance=ExtResource( 2 )]
 position = Vector2( 38, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco4" parent="BlocosL5" instance=ExtResource( 2 )]
 position = Vector2( 53, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco5" parent="BlocosL5" instance=ExtResource( 2 )]
 position = Vector2( 68, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco6" parent="BlocosL5" instance=ExtResource( 2 )]
 position = Vector2( 83, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco7" parent="BlocosL5" instance=ExtResource( 2 )]
 position = Vector2( 98, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco8" parent="BlocosL5" instance=ExtResource( 2 )]
 position = Vector2( 113, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco9" parent="BlocosL5" instance=ExtResource( 2 )]
 position = Vector2( 128, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco10" parent="BlocosL5" instance=ExtResource( 2 )]
 position = Vector2( 143, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="BlocosL6" type="Node2D" parent="."]
 position = Vector2( 0, 75 )
@@ -362,63 +210,33 @@ __meta__ = {
 
 [node name="Bloco1" parent="BlocosL6" instance=ExtResource( 2 )]
 position = Vector2( 8, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco2" parent="BlocosL6" instance=ExtResource( 2 )]
 position = Vector2( 23, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco3" parent="BlocosL6" instance=ExtResource( 2 )]
 position = Vector2( 38, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco4" parent="BlocosL6" instance=ExtResource( 2 )]
 position = Vector2( 53, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco5" parent="BlocosL6" instance=ExtResource( 2 )]
 position = Vector2( 68, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco6" parent="BlocosL6" instance=ExtResource( 2 )]
 position = Vector2( 83, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco7" parent="BlocosL6" instance=ExtResource( 2 )]
 position = Vector2( 98, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco8" parent="BlocosL6" instance=ExtResource( 2 )]
 position = Vector2( 113, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco9" parent="BlocosL6" instance=ExtResource( 2 )]
 position = Vector2( 128, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco10" parent="BlocosL6" instance=ExtResource( 2 )]
 position = Vector2( 143, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="BlocosL7" type="Node2D" parent="."]
 position = Vector2( 0, 90 )
@@ -428,63 +246,33 @@ __meta__ = {
 
 [node name="Bloco1" parent="BlocosL7" instance=ExtResource( 2 )]
 position = Vector2( 8, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco2" parent="BlocosL7" instance=ExtResource( 2 )]
 position = Vector2( 23, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco3" parent="BlocosL7" instance=ExtResource( 2 )]
 position = Vector2( 38, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco4" parent="BlocosL7" instance=ExtResource( 2 )]
 position = Vector2( 53, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco5" parent="BlocosL7" instance=ExtResource( 2 )]
 position = Vector2( 68, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco6" parent="BlocosL7" instance=ExtResource( 2 )]
 position = Vector2( 83, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco7" parent="BlocosL7" instance=ExtResource( 2 )]
 position = Vector2( 98, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco8" parent="BlocosL7" instance=ExtResource( 2 )]
 position = Vector2( 113, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco9" parent="BlocosL7" instance=ExtResource( 2 )]
 position = Vector2( 128, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco10" parent="BlocosL7" instance=ExtResource( 2 )]
 position = Vector2( 143, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="BlocosL8" type="Node2D" parent="."]
 position = Vector2( 0, 105 )
@@ -494,63 +282,33 @@ __meta__ = {
 
 [node name="Bloco1" parent="BlocosL8" instance=ExtResource( 2 )]
 position = Vector2( 8, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco2" parent="BlocosL8" instance=ExtResource( 2 )]
 position = Vector2( 23, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco3" parent="BlocosL8" instance=ExtResource( 2 )]
 position = Vector2( 38, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco4" parent="BlocosL8" instance=ExtResource( 2 )]
 position = Vector2( 53, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco5" parent="BlocosL8" instance=ExtResource( 2 )]
 position = Vector2( 68, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco6" parent="BlocosL8" instance=ExtResource( 2 )]
 position = Vector2( 83, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco7" parent="BlocosL8" instance=ExtResource( 2 )]
 position = Vector2( 98, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco8" parent="BlocosL8" instance=ExtResource( 2 )]
 position = Vector2( 113, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco9" parent="BlocosL8" instance=ExtResource( 2 )]
 position = Vector2( 128, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco10" parent="BlocosL8" instance=ExtResource( 2 )]
 position = Vector2( 143, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="BlocosL9" type="Node2D" parent="."]
 position = Vector2( 0, 120 )
@@ -560,63 +318,33 @@ __meta__ = {
 
 [node name="Bloco1" parent="BlocosL9" instance=ExtResource( 2 )]
 position = Vector2( 8, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco2" parent="BlocosL9" instance=ExtResource( 2 )]
 position = Vector2( 23, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco3" parent="BlocosL9" instance=ExtResource( 2 )]
 position = Vector2( 38, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco4" parent="BlocosL9" instance=ExtResource( 2 )]
 position = Vector2( 53, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco5" parent="BlocosL9" instance=ExtResource( 2 )]
 position = Vector2( 68, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco6" parent="BlocosL9" instance=ExtResource( 2 )]
 position = Vector2( 83, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco7" parent="BlocosL9" instance=ExtResource( 2 )]
 position = Vector2( 98, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco8" parent="BlocosL9" instance=ExtResource( 2 )]
 position = Vector2( 113, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco9" parent="BlocosL9" instance=ExtResource( 2 )]
 position = Vector2( 128, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco10" parent="BlocosL9" instance=ExtResource( 2 )]
 position = Vector2( 143, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="BlocosL10" type="Node2D" parent="."]
 position = Vector2( 0, 135 )
@@ -626,63 +354,33 @@ __meta__ = {
 
 [node name="Bloco1" parent="BlocosL10" instance=ExtResource( 2 )]
 position = Vector2( 8, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco2" parent="BlocosL10" instance=ExtResource( 2 )]
 position = Vector2( 23, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco3" parent="BlocosL10" instance=ExtResource( 2 )]
 position = Vector2( 38, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco4" parent="BlocosL10" instance=ExtResource( 2 )]
 position = Vector2( 53, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco5" parent="BlocosL10" instance=ExtResource( 2 )]
 position = Vector2( 68, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco6" parent="BlocosL10" instance=ExtResource( 2 )]
 position = Vector2( 83, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco7" parent="BlocosL10" instance=ExtResource( 2 )]
 position = Vector2( 98, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco8" parent="BlocosL10" instance=ExtResource( 2 )]
 position = Vector2( 113, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco9" parent="BlocosL10" instance=ExtResource( 2 )]
 position = Vector2( 128, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Bloco10" parent="BlocosL10" instance=ExtResource( 2 )]
 position = Vector2( 143, 8 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Paredes" type="Node2D" parent="."]
 __meta__ = {

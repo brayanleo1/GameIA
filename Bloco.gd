@@ -28,3 +28,13 @@ func goalBlock():
 
 func getArea():
 	return blocoArea
+
+
+func _on_BlocoArea_body_entered(body: KinematicBody2D):
+	if(body != self):
+		full = true
+
+
+func _on_BlocoArea_body_exited(body: KinematicBody2D):
+	if(body != self):
+		full = false

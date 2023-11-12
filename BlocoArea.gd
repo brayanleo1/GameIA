@@ -28,3 +28,5 @@ func goalBlock():
 
 func freeBlock():
 	animatedSprite.set_animation("An1")
+	
+
